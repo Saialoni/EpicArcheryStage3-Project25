@@ -76,10 +76,9 @@ function draw() {
   computerArcher.display()
 
  // Use for loop to display arrow using showArrow() function
- for (var i=0;i<playerArrows.length;i++){
-   showArrows(i,playerArrows);
- }
-
+ for (var i = 0; i < playerArrows.length; i++) {
+  showArrows(i, playerArrows);
+}
 
 }
 
@@ -94,12 +93,11 @@ function keyPressed() {
     var arrow = new PlayerArrow(posX, posY, 100, 10);
 
     arrow.trajectory = [];
-    Matter.Body.setAngle(arrow.body,angle);
+    Matter.Body.setAngle(arrow.body, angle);
     playerArrows.push(arrow);
 
   }
 }
-
 
 function keyReleased () {
 
@@ -111,11 +109,13 @@ function keyReleased () {
     }
   }
 
-
 }
 //Display arrow and Tranjectory
 function showArrows(index, arrows) {
   arrows[index].display();
+  
+    
+  
  
 
 }
